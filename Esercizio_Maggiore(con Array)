@@ -1,0 +1,34 @@
+/*
+Si scriva un programma che presi in input 3 valori, verifichi e stampi a schermo quali tra questi e` il piu` grande
+a schermo :
+E.S
+Input: 3 54 12
+Output: Il valore piu` grande e` : 54
+*/
+
+// Funzioni //
+
+
+function qualeMaggiore (primo,secondo,terzo): void {
+    
+    let maggiore:number = primo;
+
+    if (maggiore < secondo){
+        maggiore = secondo; }
+    if (maggiore < terzo){        
+        maggiore = terzo;
+    }console.log("Il valore più grande tra quelli inseriti è : "+ maggiore);
+ 
+}
+ // Main //
+
+let numeri:number[] = [];
+
+
+numeri[0] = parseInt(prompt("Inserisci il primo valore : ")); 
+numeri[1] = parseInt(prompt("Inserisci il secondo valore : ")); 
+numeri[2] = parseInt(prompt("Inserisci il terzo valore : "));
+
+
+qualeMaggiore(numeri[0],numeri[1],numeri[2]);
+
