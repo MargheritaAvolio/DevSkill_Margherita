@@ -1,0 +1,213 @@
+//Scrivere un programma che prenda in input una sequenza di numeri, e quando l'utente inserisce -1 termini
+//restituendo il valore piu` grande inserito
+//E.S 
+// Input : 1 9 19 9 1 9 0 -1
+// Output : 19
+
+
+//let sequenza:number[] = [];
+let numero:number = parseInt(prompt("Inserisci un numero"));
+let maggiore = numero;
+
+while (numero != -1){
+    //sequenza.push(numero);
+    numero = parseInt(prompt("Inserisci un numero :"));
+
+    if (numero> maggiore) {
+    maggiore = numero   
+  }
+    }
+
+console.log("Il maggiore tra i numeri inseriti è ", maggiore);
+ 
+
+
+//Scrivere un programma che calcoli il massimo in un vettore di dimensione 10 (valori presi da input)
+//E.S 
+// Input A = [ 1 9 200 9 1 9 0 50]
+// Output : 200
+
+
+let sequenza:number[] = [];
+let numero:number = parseInt(prompt("Inserisci un numero"));
+let maggiore = numero;
+
+
+
+
+while (sequenza.length < 9){
+  sequenza.push(numero);
+  numero = parseInt(prompt("Inserisci un numero :"));
+  if (numero> maggiore) {
+    maggiore = numero 
+  }
+}
+console.log("Il maggiore è ", maggiore)
+
+//Scrivere un programma che prenda in input una sequenza di numeri, e quando l'utente inserisce -1 termini
+//restituendo il valore piu` piccolo inserito
+//E.S 
+// Input : 1 9 19 9 1 9 0 -1
+// Output : 0
+
+// let sequenza:number[] = [];
+let num:number = parseInt(prompt("Inserisci un numero"));
+let minore = numero;
+
+while (num != -1){
+    //sequenza.push(num);
+    num = parseInt(prompt("Inserisci un numero :"));
+    if (num> minore) {
+      minore = num 
+    }
+  }
+  
+  if ( minore != -1){
+    console.log("Il minore tra i numeri inseriti è ", minore);
+  }
+
+ //Scrivere un programma che calcoli il massimo in un vettore di dimensione 10 ( valori scelti a piacimento)
+//E.S 
+// let A:number = [1,5,20,15,500,230];
+// Output : 500
+
+let vettore:number[] = [1,2,45,3,9,900,56,9,10,-34];
+let max:number = vettore[0];
+
+for (let i = 0; i <vettore.length; i++ ){
+
+  if ( vettore[i] > max){
+    max = vettore[i];
+  }
+}
+
+console.log("Il numero maggiore della sequenza prescelta è : ", max);
+
+
+
+
+// DIFFICILE //
+// Scrivere un programma restituisca i primi 30 numeri primi.
+// Un numero si dice primo se e` divisibile SOLO e soltanto per se stesso e per 1  
+
+
+
+// DIFFICILE //
+// Scrivere un programma restituisca i primi 30 numeri primi.
+// Un numero si dice primo se e` divisibile SOLO e soltanto per se stesso e per 1  
+
+
+let contaNumPrimi = 0;
+let n = 2;
+let messaggioFinale:string = "Ecco la lista dei primi 30 numeri primi: ";
+
+
+while (contaNumPrimi < 30) {
+  let ePrimo:boolean = true;
+
+  for (let i = 2; i < n; i++) {
+
+    if (n % i == 0) {
+      ePrimo =false;
+    }
+  }
+
+  if ( ePrimo) {
+    messaggioFinale = messaggioFinale + " \n" + n;
+    contaNumPrimi ++;
+  }
+
+  n++;
+
+}
+
+console.log(messaggioFinale)
+
+
+
+
+// DIFFICILE //
+// Scrivere un programma prenda una sequenza di numeri, terminata -1.
+// Restituisca il numero con il piu` alto numero di occorrenze .
+
+// Input : 2 3 4 2 3 1 0 1 4 4 4 0 9 19 5 -1
+// Ouput : Il numero con piu` occorrenze e` 4 
+
+let sequenza:number[] = [];
+let numero:number = parseInt(prompt("Inserisci una sequenza di numeri, per terminare inserisci (-1) "));
+let messaggioFinale:string = "Il numero con più alto numero di occorrenze tra quelli da te inseriti è : "
+
+
+
+
+while (numero != -1) {
+    sequenza.push(numero);
+    numero = parseInt(prompt("Inserisci una sequenza di numeri, per terminare inserisci (-1) "));
+}
+
+let maxOccor = 0;
+let n = 0;
+
+for (let i=0; i<sequenza.length ; i++){
+
+    let occorrenze = 1;
+
+    for(let j = i + 1; j < sequenza.length ; j++) {
+
+        if (sequenza[i] === sequenza [j]){
+            occorrenze++;
+        }
+    }
+
+    if (occorrenze> maxOccor) {
+        maxOccor = occorrenze;
+        n = sequenza[i]
+        messaggioFinale = messaggioFinale + " " + n + "; in questa sequenza viene ripetuto "+ maxOccor + "volte."
+    }
+}
+console.log(messaggioFinale)
+
+
+// DIFFICILE //
+// Scrivere un programma prenda una sequenza di numeri, terminata -1.
+// Restituisca il numero con il piu` alto numero di occorrenze .
+
+// Input : 2 3 4 2 3 1 0 1 4 4 4 0 9 19 5 -1
+// Ouput : Il numero con piu` occorrenze e` 4 
+
+let sequenza:number[] = [];
+let numero:number = parseInt(prompt("Inserisci una sequenza di numeri, per terminare inserisci (-1) "));
+let messaggioFinale:string = "Il numero con più alto numero di occorrenze tra quelli da te inseriti è : "
+
+
+
+
+while (numero != -1) {
+    sequenza.push(numero);
+    numero = parseInt(prompt("Inserisci una sequenza di numeri, per terminare inserisci (-1) "));
+}
+
+let maxOccor = 0;
+let n = 0;
+
+for (let i=0; i<sequenza.length ; i++){
+
+    let occorrenze = 1;
+
+    for(let j = i + 1; j < sequenza.length ; j++) {
+
+        if (sequenza[i] === sequenza [j]){
+            occorrenze++;
+        }
+    }
+
+    if (occorrenze> maxOccor) {
+        maxOccor = occorrenze;
+        n = sequenza[i]
+        
+    }
+}
+
+
+messaggioFinale = messaggioFinale + " " + n + "; in questa sequenza viene ripetuto "+ maxOccor + "volte."
+console.log(messaggioFinale)
