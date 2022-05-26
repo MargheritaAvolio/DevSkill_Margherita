@@ -31,7 +31,7 @@
 
 // Prendo in input i valori dell'altezza in piedi e del peso in libre
 let altezzaPiedi:number = prompt("Inserisci in valore della tua altezza - in piedi : ") *1 ;
-let pesoLibre:number = prompt("Inserisci il valore del tuo peso - in libre :") *1;
+let pesoLibre:number = prompt("Inserisci il valore del tuo peso - in libre :") *1 ;
 
 // Converto i valori dell'altezza e del peso nelle unità di misura che mi servono per il calcolo del bmi (m/kg)
 let altezza:number = altezzaPiedi /  3.281; 

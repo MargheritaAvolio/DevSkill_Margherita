@@ -100,7 +100,7 @@ Otuput: "Hai 12 anni"; */
 // Funzioni //
 
 function calcolaEta () : void {
-    let annoNascita:number = prompt("Inserisci il tuo anno di nascita : ")
+    let annoNascita:number = parseInt(prompt("Inserisci il tuo anno di nascita : "));
     let eta = 2022 - annoNascita;
     console.log("Complimenti, hai "+ eta + " anni")
 }
@@ -148,6 +148,7 @@ function eBisestile (): string{
 console.log(eBisestile());
 
 // ------------------------------------------- 6 LOWER CASE ----------------------------------------------------//
+
 //Scrivere un programma che preso in input Il nome e cognome in maiuscolo li restituisca in minuscolo
 // Cercare sul web come rendere una stringa "lowecase"
 
